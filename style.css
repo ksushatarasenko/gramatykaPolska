@@ -618,6 +618,16 @@ button { margin-top: 10px; }
 .word-card{
   cursor: pointer;
 }
+.audio{
+   display: flex;
+   gap: 2%;
+   margin: 1%;
+   align-items: center;
+}
+.audio>img{
+   border-radius: 55%;
+   cursor: pointer;
+}
 /* Icons */
 .icone{
    width: 26px;
