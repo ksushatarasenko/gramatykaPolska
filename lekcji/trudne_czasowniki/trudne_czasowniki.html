@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trudne_czasowniki</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../styleText.css">
+    <link rel="stylesheet" href="../../styleTable.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <ul class="ulhead">
+                <li class="li"><a href="../../index.html">Home</a></li>
+            </ul>
+        </header>
+        <main class="main">
+
+
+            <button id="scrollTopBtn" title="Наверх">&#8679;</button>
+            <h1>📘 Trudne czasowniki</h1>
+            <dib class="blockZadanie">
+                <table>
+                    <tr>
+                        <th>Aspekt niedokonay</th>
+                        <th>Aspekt dokonany</th>
+                    </tr>
+                    <tr>
+                        <td><a href="./czasowniki/czekac.html">czekać ()</a></td>
+                        <td>poczekać ()</td>
+                    </tr>
+                    <tr>
+                        <td><a href="./czasowniki/czytac.html">czytać ()</a></td>
+                        <td>przeczytać ()</td>
+                    </tr>
+                    <tr>
+                        <td><a href="./czasowniki/dawac.html">dawać ()</a></td>
+                        <td><span class="red">dać</span> ()</td>
+                    </tr>
+                    <tr>
+                        <td><a href="./czasowniki/dostawac.html">dostawać ()</a></td>
+                        <td><span class="red">dostać</span> ()</td>
+                    </tr>
+                    <tr>
+                        <td><a href="./czasowniki/dziekowac.html">Dziękować ()</a></td>
+                        <td>Podziękować ()</td>
+                    </tr>
+                    <tr>
+                        <td><a href="./czasowniki/dzwonic.html">Dzwonić ()</a></td>
+                        <td>Zadzwonić ()</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </dib>
+           
+           
+
+
+        </main>
+    </div>
+    <script>
+        const scrollBtn = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+
+        scrollBtn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    <script src="./../../script.js"></script>
+    <script src="../../wyborOtweta.js"></script>
+    <script src="./wordData01.js"></script>
+</body>
+
+</html>
