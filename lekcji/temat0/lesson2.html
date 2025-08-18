@@ -18,12 +18,18 @@
             </ul>
         </header>
         <main class="main">
+            <button id="scrollTopBtn" title="Наверх">&#8679;</button>
             <h1>Frazy A1</h1>
             <h2>Практический тренажёр. Перевод с русского на польский.</h2>
-
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/d2tm6zC7TGA?si=8FVEWvPsJI3Oxr7V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div>
+                <p  class="p24"><a href="#03">Czyj? Czyja? Czyje? >></a></p>
+            </div>
 
             <!-- 3 -->
-            <div class="blockZadanie">
+            <div class="blockZadanie" id="03">
                 <h3>Czyj? Czyja? Czyje?</h3>
                 <div>
                     <p class="p22">1. Это мой телефон, моя книжка и мой письменный стол.</p>
@@ -208,6 +214,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- 15 -->
                 <div>
                     <p class="p22">15. А знаешь, чей этот мобильник?</p>
                     <div class="flex">
@@ -234,6 +241,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- 17 -->
                 <div>
                     <p class="p22">17. А чьи эти ключи?</p>
                     <div class="flex">
@@ -247,8 +255,9 @@
                         </div>
                     </div>
                 </div>
+                <!-- 18 -->
                 <div>
-                    <p class="p22">18. О, это мои ключи! Спасибою</p>
+                    <p class="p22">18. О, это мои ключи! Спасибо.</p>
                     <div class="flex">
                         <div class="hint2-container" onclick="toggleHint2(this)">
                             <div class="hint2-header">Po polsku 🇮🇩👇</div>
@@ -296,9 +305,22 @@
 
         </main>
     </div>
+     <script>
+        const scrollBtn = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+
+        scrollBtn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
     <script src="./../../script.js"></script>
-    <script src="../../wyborOtweta.js"></script>
-    <script src="./wordData01.js"></script>
 </body>
 
 </html>
