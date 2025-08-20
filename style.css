@@ -517,35 +517,6 @@ li{
    font-weight: 600;
 }
 
-/* Левый значок (иконка) через ::before */
-.hint2-header::before {
-   content: '';
-   display: inline-block;
-   width: 30px;
-   height: 30px;
-   margin-right: 10px;
-   background-image: url('./image/shapka.png');
-   background-size: contain;
-   background-repeat: no-repeat;
-   background-position: center;
-   transition: opacity 0.3s ease-in-out;
-   opacity: 1;
-}
-
-/* Стрелка справа через ::after */
-.hint2-header::after {
-   content: '';
-   display: inline-block;
-   width: 30px;
-   height: 30px;
-   background-image: url('./image/strelkaVerch.png');
-   background-size: contain;
-   background-repeat: no-repeat;
-   background-position: center;
-   transition: transform 0.3s ease-in-out;
-   transform: rotate(0deg);
-}
-
 /* Контент с текстом */
 .hint2-content {
    max-height: 0;
@@ -556,27 +527,64 @@ li{
    transition: opacity 0.3s ease-in-out, max-height 0.6s ease-in-out, padding 0.6s ease-in-out;
 }
 .hint2-content p{
-   font-size: 18px;
+   font-size: 22px;
 }
+
 
 /* Раскрытие блока */
 .hint2-container.active .hint2-content {
    padding: 0 2px 5px 2px;
-   max-height: 1000px; /* Достаточно для раскрытия текста */
+   max-height: 100000px; /* Достаточно для раскрытия текста */
+   opacity: 1; /* Плавное появление */
+   max-width: 100%;
+}
+/* Czest 2 raskrytia bloka */
+.h-container {
+   background-color: #e8f4fd;
+   border-radius: 10px;
+   border: 1px solid #b9d6f3;
+   padding: 5px 20px;
+   margin: 20px auto;
+   cursor: pointer;
+   width: 98%;
+   position: relative;
+   overflow: hidden;
+}
+
+/* Заголовок блока */
+.h-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+   font-size: 24px;
+   color: #230575;
+   font-weight: 600;
+   text-align: center;
+   padding: 1%;
+}
+.h-content {
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height 0.6s ease-in-out, padding 0.3s ease-in-out;
+   padding: 0 2px 0 2px;
+   opacity: 0; /* Для плавного появления и исчезновения текста */
+   transition: opacity 0.3s ease-in-out, max-height 0.6s ease-in-out, padding 0.6s ease-in-out;
+}
+.h-content p{
+   font-size: 22px;
+}
+
+/*  */
+/* Раскрытие блока */
+.h-container.active .h-content {
+   padding: 0 2px 5px 2px;
+   max-height: 1000000px; /* Достаточно для раскрытия текста */
    opacity: 1; /* Плавное появление */
    max-width: 100%;
 }
 
-/* Плавное скрытие иконки при активации */
-.hint2-container.active .hint2-header::before {
-   opacity: 0;
-   transition: opacity 0.3s ease-in-out;
-}
 
-/* Поворот стрелки при активации */
-.hint2-container.active .hint2-header::after {
-   transform: rotate(180deg);
-}
 
 /* ---------- END POKAZ OTWETA OPTIMA ------------------ */
 .left{
