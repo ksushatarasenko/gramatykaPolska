@@ -26,6 +26,15 @@
         </div>
     </div>
 </div>
+
+<div class="h-container" onclick="toggleHint2(this)">
+        <div class="h-header"></div>
+        <div class="h-content">
+            <div>
+                
+            </div>
+        </div>
+    </div>
 <!-- OTWET -->
 
 <div class="flex">

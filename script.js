@@ -101,7 +101,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // prowerka Optima
 
-function toggleHint2(element) {
+function toggleHint1(element, event) {
+    event.stopPropagation(); // остановить всплытие
+    element.classList.toggle('active');
+}
+
+function toggleHint2(element, event) {
+    event.stopPropagation(); // остановить всплытие
     element.classList.toggle('active');
 }
 
